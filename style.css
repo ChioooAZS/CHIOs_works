@@ -661,7 +661,7 @@ h6 {
     .board {
     position: fixed;
     overflow-y: hidden;
-    top: -8vh;
+    top: -5vh;
     z-index: 101;
 
     animation: boardmove 4.8s 1.3s infinite, boardslide 1.5s 0s none cubic-bezier(0, 1.1, 0.9, 1);

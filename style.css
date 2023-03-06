@@ -1,0 +1,657 @@
+@font-face {
+    font-family: "GenmaruR";
+    src: url("fonts/GenSenMaruGothicTW-Regular.ttf");
+}
+
+@font-face {
+    font-family: "GenmaruB";
+    src: url("fonts/GenSenMaruGothicTW-Bold.ttf");
+}
+
+
+@font-face {
+    font-family: "GenmaruH";
+    src: url("fonts/GenSenMaruGothicTW-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "mym";
+    src: url("fonts/MYuenHK-Xbold.otf");
+}
+
+@font-face {
+    font-family: "maru";
+    src: url("fonts/DFT_RE.ttf");
+}
+
+/*-------------------------------------------------*/
+
+body {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.viewer-open {
+    padding-right: 0 !important;
+}
+
+.phone {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.nopaddingleft {
+    padding-left: 0 !important;
+}
+
+.nopaddingright {
+    padding-right: 0 !important;
+}
+
+.halfpaddingleft {
+    padding-left: 8px !important;
+}
+
+.halfpaddingright {
+    padding-right: 8px !important;
+}
+
+.fourthreepaddingleft {
+    padding-left: 10px !important;
+}
+
+.fourthreepaddingright {
+    padding-right: 10px !important;
+}
+
+.nopaddingup {
+    padding-top: 0 !important;
+}
+
+.d4left {
+    padding-left: 4px !important;
+}
+
+.d4right {
+    padding-right: 4px !important;
+}
+
+
+/*-fonts-*/
+
+
+a {
+    color: rgb(117, 174, 196) !important;
+}
+
+.brhalf {
+    display: block;
+    height: 10px;
+}
+
+h1 {
+    font-family: 'maru';
+}
+
+h1.c {
+    font-family: 'maru';
+    font-size: 60px;
+}
+
+h2 {
+    font-family: "mym";
+}
+
+
+h4 {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+}
+
+p {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p2 {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 14px;
+    font-style: oblique;
+    font-weight: 200;
+    letter-spacing: 0.07rem;
+}
+
+p.sd {
+    font-family: "mym";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h6 {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    padding-bottom: 5px;
+}
+
+
+/*-animate-*/
+
+.animate__animated.animate__slideInDown {
+    --animate-duration: 2s;
+    --animate-delay: 0.1s;
+}
+
+.animate__slideInRight {
+    --animate-duration: 0.8s;
+}
+
+.animate__slideInUp {
+    --animate-duration: 0.8s;
+}
+
+.animate__slideInOut {
+    --animate-duration: 0.8s;
+}
+
+/*.animate__animated.animate__bounceInRight {
+    --animate-duration: 1.5s;
+    --animate-delay: 0.5s;
+}*/
+
+.delay1.animate__bounceIn {
+    animation-delay: 0.0s;
+}
+
+.delay2.animate__bounceIn {
+    animation-delay: 0.2s;
+}
+
+.delay3.animate__bounceIn {
+    animation-delay: 0.4s;
+}
+
+.delay4.animate__bounceIn {
+    animation-delay: 0.6s;
+}
+
+.delay5.animate__bounceIn {
+    animation-delay: 0.8s;
+}
+
+.animate__animated.animate__pulse {
+    --animate-duration: 0.4s;
+    --animate-delay: 0s;
+}
+
+/*-animate__animated animate__slideInRight wow-*/
+
+@keyframes boardslide {
+
+    0% {
+        transform: translate(0, -100vh);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes boardmove {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -3vh);
+    }
+
+    100% {
+        transform: translate(0, -0);
+    }
+}
+
+/*-composit-*/
+
+.pnom {
+    margin-bottom: 0px !important;
+}
+
+.bigbox {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+    padding-right: 0 !important;
+}
+
+.sky {
+    background-color: rgb(88, 194, 217);
+    padding: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 0px !important;
+    z-index: 50;
+}
+
+.city {
+    position: fixed;
+    bottom: 5vh;
+    z-index: 70;
+}
+
+.board {
+    position: fixed;
+    top: 0;
+    z-index: 101;
+
+    animation: boardmove 4.8s 1.3s infinite, boardslide 1.5s 0s none cubic-bezier(0, 1.1, 0.9, 1);
+}
+
+.foutain {
+    position: fixed;
+    bottom: 5vh;
+    z-index: 80;
+}
+
+
+
+.floor {
+    background-color: rgb(67, 64, 61);
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 101;
+}
+
+
+.house {
+    position: absolute;
+    padding: 0 !important;
+    left: 5vw;
+    bottom: 5vh;
+    z-index: 102;
+
+}
+
+/*-- .house img{
+    max-width: 100%;
+    max-height: auto;
+    
+}---*/
+
+.realhouse {
+
+    max-width: 100%;
+    max-height: auto;
+    z-index: 103 !important;
+}
+
+.white {
+    background-color: white;
+
+    z-index: 102;
+    /**/
+}
+
+.rooms {
+    position: inherit;
+    bottom: 3vh;
+    z-index: 104 !important;
+    padding-left: 3vw !important;
+    padding-right: 3vw !important;
+}
+
+.rooms img {
+    cursor: pointer;
+}
+
+.whitebox {
+    padding-right: 0 !important;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.whiterow {
+    position: relative;
+    max-height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.media-box {
+    display: none;
+    padding-left: 25px !important;
+    padding-right: 15px !important;
+}
+
+.print-box {
+    display: none;
+    padding-left: 25px !important;
+    padding-right: 15px !important;
+}
+
+.digital-box {
+    display: none;
+    padding-left: 25px !important;
+    padding-right: 15px !important;
+}
+
+.analog-box {
+    display: none;
+    padding-left: 25px !important;
+    padding-right: 15px !important;
+}
+
+.aboutme-box {
+    display: none;
+    padding-left: 25px !important;
+    padding-right: 15px !important;
+}
+
+
+/*--button_for_white---------------*/
+
+.media-box.white {
+    position: relative;
+    background-color: white;
+    width: 100%;
+
+    display: block;
+    z-index: 102 !important;
+    /**/
+}
+
+.print-box.white {
+    position: relative;
+
+    background-color: white;
+    width: 100%;
+
+    display: block;
+    z-index: 104 !important;
+    /**/
+}
+
+.digital-box.white {
+    position: relative;
+
+    background-color: white;
+    width: 100%;
+
+    display: block;
+    z-index: 103 !important;
+    /**/
+}
+
+.analog-box.white {
+    position: relative;
+
+    background-color: white;
+    width: 100%;
+
+    display: block;
+    z-index: 105 !important;
+    /**/
+}
+
+.aboutme-box.white {
+    position: relative;
+
+    background-color: white;
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+    z-index: 106 !important;
+    /**/
+}
+
+/*--button_for_exit---------------*/
+
+.exit {
+    top: 30px;
+    right: 2vw;
+    width: 25px;
+    height: 25px;
+    background-image: url(pics/x.webp);
+    background-size: contain;
+    position: absolute;
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.exit:hover {
+    transform: scale(1.25);
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.btt {
+    width: 25px;
+    height: 25px;
+    background-image: url(pics/%5E.webp);
+    background-size: contain;
+
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.btt:hover {
+    transform: scale(1.25);
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+/*--contact---------------*/
+
+.fb {
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.ig {
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.mail {
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+
+.fb:hover {
+    transform: scale(1.15);
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.ig:hover {
+    transform: scale(1.15);
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.mail:hover {
+    transform: scale(1.15);
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.pics img:hover {
+    cursor: pointer;
+}
+
+
+
+/*------responsive-----------*/
+
+@media screen and (max-width: 768px) {
+    /*--ji size phone--*/
+    /* .container-fluid p{
+      font-size: 0.85rem;
+      background: none;
+    }
+    .container p{
+      font-size: 0.85rem;
+      background: none;
+    }*/
+
+    .whitebox {
+        height: 95vh;
+    }
+
+    .phonebr {
+        height: 15px;
+        display: block;
+    }
+
+    .phonebr2 {
+        height: 10px;
+        display: block;
+    }
+
+    .house {
+        position: fixed;
+        left: 3vw;
+    }
+
+    .rooms {
+        position: inherit;
+        bottom: 2.5vh;
+        z-index: 104 !important;
+        padding-left: 7vw !important;
+        padding-right: 7vw !important;
+    }
+
+    .phone {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .media_kuan {
+        padding-right: 6px !important;
+    }
+
+    .digital_kuan {
+        padding-right: 6px !important;
+    }
+
+    .aboutme_kuan {
+        padding-right: 6px !important;
+    }
+
+    .print_kuan {
+        padding-left: 6px !important;
+    }
+
+    .analog_kuan {
+        padding-left: 6px !important;
+    }
+
+    .bigthing {
+        padding: 0 !important;
+    }
+
+    /*-  .exit {
+        position: fixed;
+        bottom: 0vh!important;
+        right: 5vw!important;
+        z-index: 500;
+    } --*/
+
+    .whitebox {
+        padding-left: 0px !important;
+    }
+
+    .whiterow {
+        margin-left: 0px !important;
+        border-left: 0px !important;
+    }
+
+    .floorexit {
+        display: none;
+    }
+
+    .floorexit.on {
+        display: block;
+        bottom: 13px;
+        left: 22px;
+        width: 20px;
+        height: 20px;
+        background-image: url(pics/x.webp);
+        background-size: contain;
+        position: fixed;
+        vertical-align: middle;
+        transition: transform 0.1s;
+        z-index: 500;
+    }
+
+    .floorexit:hover {
+
+        transform: scale(1.25);
+
+        transition-timing-function: ease;
+        cursor: pointer;
+    }
+
+    h4 {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+    }
+
+    h1.c {
+        font-family: 'maru';
+        font-size: 42px;
+    }
+
+    .phonepaddingup {
+        padding-top: 12px;
+    }
+
+    .phonepaddingmoreup {
+        padding-top: 20px;
+    }
+
+    p.sd {
+        font-size: 16px;
+        font-weight: 300 !important;
+        margin-bottom: 10px;
+    }
+
+    .phonepaddingleft {
+        padding-left: 12px !important;
+    }
+
+    .phonepaddingright {
+        padding-right: 12px !important;
+    }
+
+    .phonenopaddingleft {
+        padding-left: 0 !important;
+    }
+
+    .phonepnoaddingright {
+        padding-right: 0 !important;
+    }
+
+    .phone4left {
+        padding-left: 4px !important;
+    }
+
+    .phone4right {
+        padding-right: 4px !important;
+    }

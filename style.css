@@ -237,7 +237,7 @@ h6 {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    bottom: 0px !important;
+    bottom: 5vh !important;
     z-index: 50;
 }
 

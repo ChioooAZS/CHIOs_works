@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: "maru";
-    src: url("fonts/DFT_RE.ttf");
+    src: url("fonts/DFT_RE.TTF");
 }
 
 /*-------------------------------------------------*/
@@ -232,7 +232,7 @@ h6 {
 }
 
 .sky {
-    background-color: rgb(88, 194, 217);
+    background-image: url(pics/cloudps_4.gif);
     padding: 0 !important;
     width: 100vw;
     height: 100vh;
@@ -240,6 +240,8 @@ h6 {
     bottom: 0px !important;
     z-index: 50;
 }
+
+
 
 .city {
     position: fixed;

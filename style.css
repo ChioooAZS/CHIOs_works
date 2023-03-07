@@ -29,6 +29,7 @@
 body {
     scroll-behavior: smooth;
     overflow: hidden;
+    overflow-y: hidden!important;
 }
 
 .viewer-open {
@@ -233,11 +234,12 @@ h6 {
 
 .sky {
     background-image: url(pics/cloudps_4.gif);
+    background-size: cover;
     padding: 0 !important;
     width: 100vw;
     height: 100vh;
     position: fixed;
-    bottom: 5vh !important;
+    bottom: 0vh !important;
     z-index: 50;
 }
 

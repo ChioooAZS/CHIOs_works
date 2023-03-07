@@ -320,7 +320,7 @@ h6 {
 .whitebox {
     padding-right: 0 !important;
     position: relative;
-    height: 100vh;
+    height: 120vh;
     overflow: hidden;
 }
 
@@ -512,7 +512,11 @@ h6 {
     }*/
 
     .whitebox {
-        height: 95vh;
+        height: 100vh;
+    }
+    
+    .floor{
+        z-index: 250!important;
     }
 
     .phonebr {
@@ -592,10 +596,10 @@ h6 {
 
     .floorexit.on {
         display: block;
-        bottom: 13px;
+        bottom: 1.3vh;
         left: 22px;
-        width: 20px;
-        height: 20px;
+        width: 19px;
+        height: 19px;
         background-image: url(pics/x.webp);
         background-size: contain;
         position: fixed;

@@ -234,7 +234,7 @@ h6 {
 
 .sky {
     background-image: url(pics/cloudps_4.gif);
-    background-size: cover;
+    background-size:auto;
     padding: 0 !important;
     width: 100vw;
     height: 95vh;
@@ -510,6 +510,11 @@ h6 {
       font-size: 0.85rem;
       background: none;
     }*/
+    
+    .sky{
+        background-size: cover;
+        height: 95vh;
+    }
 
     .whitebox {
         height: 100vh;
@@ -672,3 +677,18 @@ h6 {
 
     animation: boardmove 4.8s 1.3s infinite, boardslide 1.5s 0s none cubic-bezier(0, 1.1, 0.9, 1);
 }
+    
+    /*-sky responsive-*/
+    @media screen and (max-height: 768px) {
+        
+        .sky{
+            height: 80vh;
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
